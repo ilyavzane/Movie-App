@@ -7,8 +7,15 @@ fetch("https://kinopoiskapiunofficial.tech/api/v2.2/films/301", {
     "Content-Type": "application/json",
   },
 })
-  .then((res) => (film = res.json()))
-  .then((data) => (film = data))
-  .catch((err) => console.log(err));
-
-console.log(film);
+  .then((res) => {
+    if (!res.ok)
+      throw new Error("Network response was not ok " + res.statusText);
+    return res.json();
+  })
+  .then((data) => {
+    film = data;
+     console.log(film);
+  })
+  .catch((err) => console.log("Fetch error: ", err));
+  
+  // проверяем, что данные правильно загружены
