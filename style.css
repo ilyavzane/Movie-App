@@ -125,8 +125,6 @@ table {
   border-spacing: 0;
 }
 
-
-
 body {
   background-color: #221f1f;
 }
@@ -164,15 +162,24 @@ body {
   opacity: 0.4;
 }
 
-.wave {
+.wave1 {
   position: absolute;
   top: 0;
+  z-index: -2;
   transform: rotate(180deg);
 }
 
-.wave {
+.wave2 {
   position: absolute;
-  z-index: -2;
+  top: 3%;
+  z-index: -3;
+  transform: rotate(180deg);
+}
+
+.wave3 {
+  position: absolute;
+  top: 5%;
+  z-index: -4;
   transform: rotate(180deg);
 }
 
@@ -217,7 +224,7 @@ body {
   font-family: sans-serif;
 }
 
-.movie_average--green::before{
+.movie_average--green::before {
   content: "";
   z-index: -1;
   left: -13.2px;
@@ -228,7 +235,6 @@ body {
   width: 35px;
   height: 35px;
   background-color: #221f1f;
-
 }
 
 .movie_card {
@@ -258,7 +264,6 @@ body {
   cursor: pointer;
 }
 
-
 @media (max-width: 1200px) {
   .movies_container {
     grid-template-columns: repeat(3, 1fr);
@@ -266,6 +271,29 @@ body {
 
   .wave {
     top: 20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .wave1 {
+    position: absolute;
+    top: 3%;
+    z-index: -2;
+    transform: rotate(180deg);
+  }
+
+  .wave2 {
+    position: absolute;
+    top: 6%;
+    z-index: -3;
+    transform: rotate(180deg);
+  }
+
+  .wave3 {
+    position: absolute;
+    top: 8%;
+    z-index: -4;
+    transform: rotate(180deg);
   }
 }
 
@@ -284,6 +312,27 @@ body {
   .movie-card {
     margin-top: 10px;
   }
+
+  .wave1 {
+    position: absolute;
+    top: 3%;
+    z-index: -2;
+    transform: rotate(180deg);
+  }
+
+  .wave2 {
+    position: absolute;
+    top: 4%;
+    z-index: -3;
+    transform: rotate(180deg);
+  }
+
+  .wave3 {
+    position: absolute;
+    top: 5%;
+    z-index: -4;
+    transform: rotate(180deg);
+  }
 }
 
 @media (max-width: 600px) {
@@ -296,4 +345,60 @@ body {
   .input {
     width: 30%;
   }
+
+    .wave1 {
+    position: absolute;
+    top: 5%;
+    z-index: -2;
+    transform: rotate(180deg);
+  }
+
+  .wave2 {
+    position: absolute;
+    top: 6%;
+    z-index: -3;
+    transform: rotate(180deg);
+  }
+
+  .wave3 {
+    position: absolute;
+    top: 7%;
+    z-index: -4;
+    transform: rotate(180deg);
+  }
 }
+
+@media (max-width: 400px) {
+  .movies_container {
+    width: 60%;
+    grid-template-columns: repeat(1, 1fr);
+    margin-top: 200px;
+  }
+
+  .input {
+    width: 30%;
+  }
+
+    .wave1 {
+    position: absolute;
+    top: 6%;
+    z-index: -2;
+    transform: rotate(180deg);
+  }
+
+  .wave2 {
+    position: absolute;
+    top: 7%;
+    z-index: -3;
+    transform: rotate(180deg);
+  }
+
+  .wave3 {
+    position: absolute;
+    top: 8%;
+    z-index: -4;
+    transform: rotate(180deg);
+  }
+}
+
+
